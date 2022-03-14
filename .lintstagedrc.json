@@ -1,0 +1,8 @@
+{
+  "*.+(js|jsx|tsx|ts)": [
+    "eslint --fix",
+    "prettier --write",
+    "npm run test:staged"
+  ],
+  "*.+(json|css|scss|md)": ["prettier --write"]
+}
