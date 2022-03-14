@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  prod-frontend-app:
+    container_name: prod-frontend-app
+    image: prod-frontend-app
+    build:
+      dockerfile: ./.docker/prod-frontend-app.dockerfile
+      context: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3001:80"
