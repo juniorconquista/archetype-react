@@ -2,8 +2,15 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Home from './Home';
 
-test('renders learn react link', () => {
+const makeSut = () => {
   render(<Home />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+};
+
+describe('GIVEN <Home />', () => {
+  describe('WHEN rendered', () => {
+    it('renders learn react link', () => {
+      makeSut();
+      expect(screen.getByText(/learn react/i)).toBeInTheDocument();
+    });
+  });
 });
