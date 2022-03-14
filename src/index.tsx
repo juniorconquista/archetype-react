@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { IS_PRODUCTION } from 'commons/constants';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 import 'commons/styles/base.css';
+
+if (!IS_PRODUCTION) {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  const { worker } = require('commons/tests/mocks/server/browser');
+  worker.start();
+}
 
 ReactDOM.render(
   <React.StrictMode>

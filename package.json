@@ -72,5 +72,8 @@
       "src/setupTests.ts",
       "src/index.tsx"
     ]
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
