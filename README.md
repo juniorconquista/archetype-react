@@ -54,10 +54,6 @@
   feat: description
   ```
 
-  The total length of characters allowed cannot exceed 52 characters, this is done by normalization of kubernetes and helm (herramienta that is used to deploy every month).
-
-  Every branch the name of ms, must be DNS Compliant, and only decide that rare characters are not accepted (#, $, %, \_ , etc), we only allow el - y la /.
-
   To standardize our commits we use [Conventional Commits](https://www.conventionalcommits.org/) a specification for adding human and machine readable meaning to commit messages
 
 - **Linter**
