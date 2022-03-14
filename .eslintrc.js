@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'jest/expect-expect': 'off',
     'prettier/prettier': [
       'warn',
       {

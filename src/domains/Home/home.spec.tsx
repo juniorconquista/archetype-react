@@ -1,5 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
+import { Handler } from 'commons/tests/helpers';
 import Home from './Home';
 
 const makeSut = () => {
@@ -10,7 +11,7 @@ describe('GIVEN <Home />', () => {
   describe('WHEN rendered', () => {
     it('renders learn react link', () => {
       makeSut();
-      expect(screen.getByText(/learn react/i)).toBeInTheDocument();
+      Handler.element(/learn react/i, 'getByText').exists();
     });
   });
 });

@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
+import { Handler } from 'commons/tests/helpers';
 import Router from './Router';
 
 const Home = () => <div>Home</div>;
@@ -14,7 +15,7 @@ describe('GIVEN <Routes />', () => {
   describe('WHEN rendered', () => {
     it('THEN renders correctly as publicRoutes', async () => {
       makeSut();
-      expect(screen.getByText('Home')).toBeInTheDocument();
+      Handler.element('Home', 'getByText').exists();
     });
   });
 });

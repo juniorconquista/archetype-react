@@ -1,6 +1,7 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 
+import { Handler } from 'commons/tests/helpers';
 import App from './App';
 
 const Router = () => <div>router</div>;
@@ -14,7 +15,7 @@ describe('GIVEN <App />', () => {
   describe('WHEN rendered', () => {
     it('THEN renders correctly', () => {
       makeSut();
-      expect(screen.getByText('router')).toBeInTheDocument();
+      Handler.element('router', 'getByText').exists();
     });
   });
 });
