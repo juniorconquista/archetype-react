@@ -1,4 +1,4 @@
-# ⚛️ Archetype React
+# ⚛️ Archetype React ![archetype react badge](https://github.com/juniorconquista/archetype-react/actions/workflows/main.yml/badge.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 > This template aims to accelerate the start of a react project using Create React App, it already provides basic quality settings and project standardizations.
 
