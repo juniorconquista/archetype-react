@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  dev-frontend-app:
+    container_name: dev-frontend-app
+    image: dev-frontend-app
+    build:
+      dockerfile: ./.docker/dev-frontend-app.dockerfile
+      context: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
