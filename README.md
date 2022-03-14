@@ -9,7 +9,12 @@
 - [Testing library](https://testing-library.com/docs/) for testing web pages by querying and interacting with DOM nodes
 - [Jest](https://jestjs.io/docs/getting-started) for matchers and mocks in unit tests
 
-## 🚀 Start developing
+## 🚀 Start developing locally
+
+- **Setting environment variables**
+
+  Create `.env` file with all settings the application will need to run. <br/>There is a `.env.example` file in the root of project's directory which you can use as a model for that.
+  <br/>
 
 - **Install dependencies**
 
@@ -17,7 +22,7 @@
 
   ```shell
   $ npm install
-  // or
+  # or
   $ yarn
   ```
 
@@ -30,16 +35,47 @@
 - **Start developing**
 
   ```shell
-  # development
   $ yarn start
-
-  # production mode (locally)
-  $ yarn build && yarn serve
   ```
 
   Project should be running at http://localhost:3000
+  <br/>
 
-- **Create _.env_ file with all settings the application will need to run. There is a _.env.example_ file in the root of project's directory which you can use as a model for that.**
+- **Start production mode**
+
+  ```shell
+  $ yarn build
+  $ global add serve
+  $ serve -s build
+  ```
+
+  Project should be running at http://localhost:3000
+  <br/>
+
+## 🐳 Start developing Docker
+
+- **Setting environment variables**
+
+  Create `.env` file with all settings the application will need to run. <br/>There is a `.env.example` file in the root of project's directory which you can use as a model for that.
+  <br/>
+
+- **Start developing and building**
+
+  ```shell
+  $ docker-compose -f docker-compose.dev.yml up -d --build
+  ```
+
+  Project should be running at http://localhost:3000
+  <br/>
+
+- **Start production mode (locally)**
+
+  ```shell
+  $ docker-compose up -d --build
+  ```
+
+  Project should be running at http://localhost:3001
+  <br/>
 
 ## 📚 General informations
 
@@ -54,7 +90,7 @@
   feat: description
   ```
 
-  To standardize our commits we use [Conventional Commits](https://www.conventionalcommits.org/) a specification for adding human and machine readable meaning to commit messages
+  To standardize our commits we use [Conventional Commits](https://www.conventionalcommits.org/) a specification for adding human and machine readable meaning to commit messages.
 
 - **Linter**
 
@@ -79,10 +115,12 @@
    # run tests only on changed files
    $ yarn test:staged
 
-   # run all unit tests generates the coverage report in the coverage folder in the project root
+   # run all unit tests generates the coverage report in the coverage folder
+   # in the project root
    $ yarn test:coverage
 
-   # run all unit tests generates the coverage report in the coverage folder in the project root and watch changes in related files
+   # run all unit tests generates the coverage report in the coverage folder
+   # in the project root and watch changes in related files
    $ yarn test:watch:coverage
   ```
 
